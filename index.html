@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>🎁 Surprise Page</title>
+  <title>🎁 সারপ্রাইজ পেজ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
@@ -43,7 +43,7 @@
       transform: translateX(-50%);
       width: 40px;
       height: 100%;
-      background: #fff;
+      background: #ffeb3b; /* নতুন রঙ: হালকা হলুদ */
       z-index: 2;
     }
 
@@ -53,7 +53,7 @@
       position: absolute;
       width: 100%;
       height: 40px;
-      background: #fff;
+      background: #ffeb3b; /* একই রঙ */
       left: 0;
     }
 
@@ -97,23 +97,25 @@
       transform: translateX(100%);
     }
 
-.click-text {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 16px;
-  animation: blink 1s infinite;
-}
+    .click-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      animation: blink 1s infinite;
+      z-index: 3; /* ribbon এর উপরে থাকবে */
+      text-align: center;
+    }
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      50% { opacity: 0.5; }
     }
   </style>
 </head>
@@ -133,10 +135,8 @@
 
     gift.addEventListener('click', () => {
       wrapper.classList.add('open');
-
-      // animation duration 1s, delay before redirecting
       setTimeout(() => {
-        window.location.href = "https://officialenayet.github.io/nazmonxauthey.io/"; // 🔁 এখানেই redirect URL বসান
+        window.location.href = "https://your-link-here.com"; // 🔁 এখানে আপনার আসল পেজের লিংক বসান
       }, 1500);
     });
   </script>
